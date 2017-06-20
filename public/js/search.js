@@ -20,7 +20,7 @@ var index = elasticlunr(function () {
 index.addDoc({
   title: {{text.title | jsonify}},
   author: {{text.author | jsonify}},
-  content: {{text.content | jsonify | strip_html}},,,
+  content: {{text.content | jsonify | strip_html}},
   id: {{count}}
 });{% assign count = count | plus: 1 %}{% endfor %}
 console.log( jQuery.type(index) );

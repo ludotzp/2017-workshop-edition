@@ -830,7 +830,7 @@ ol.bibliography {
   text-decoration: line-through;
 }
 
-.del {
+.add {
   font-size: 85%;
   color: blue;
   vertical-align: baseline;

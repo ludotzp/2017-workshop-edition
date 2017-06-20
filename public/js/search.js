@@ -10,8 +10,6 @@ var index = elasticlunr(function () {
   this.addField('author')
   this.addField('layout')
   this.addField('content')
- // this.addField('activities')
- // this.addField('purposes')
   this.setRef('id')
 });
 
@@ -73,10 +71,8 @@ function doSearch() {
   //Loop through, match, and add results
   for (var item in result) {
     var ref = result[item].ref;
-    var act = "";
-    var purp = "";
-    var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a><p>';
-    var end = '</p><p>'+store[ref].excerpt+'</p></div>';
+    var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a>';
+    var end = '<p>'+store[ref].excerpt+'</p></div>';
     searchitem += act + purp + end;
     resultdiv.append(searchitem);
    }

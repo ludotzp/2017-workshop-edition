@@ -73,7 +73,7 @@ function doSearch() {
     var ref = result[item].ref;
     var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a>';
     var end = '<p>'+store[ref].excerpt+'</p></div>';
-    searchitem += act + purp + end;
+    searchitem += end;
     resultdiv.append(searchitem);
    }
   }

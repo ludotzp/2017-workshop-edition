@@ -3,6 +3,6 @@
 [![Build Status](https://travis-ci.org/elotroalex/ed.svg?branch=gh-pages)](https://travis-ci.org/elotroalex/ed)
 
 
-## To view: https://cu-mkp.github.io/GR8975-edition/
+## To view: https://cu-mkp.github.io/2017-workshop-edition/
 ## Introduction
 

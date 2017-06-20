@@ -10,8 +10,8 @@ var index = elasticlunr(function () {
   this.addField('author')
   this.addField('layout')
   this.addField('content')
-  this.addField('activities')
-  this.addField('purposes')
+ // this.addField('activities')
+ // this.addField('purposes')
   this.setRef('id')
 });
 
@@ -22,10 +22,7 @@ var index = elasticlunr(function () {
 index.addDoc({
   title: {{text.title | jsonify}},
   author: {{text.author | jsonify}},
-  layout: {{text.layout | jsonify}},
-  content: {{text.content | jsonify | strip_html}},
-  activities: {{text.activities |jsonify}},
-  purposes: {{text.purposes |jsonify}},
+  content: {{text.content | jsonify | strip_html}},,,
   id: {{count}}
 });{% assign count = count | plus: 1 %}{% endfor %}
 console.log( jQuery.type(index) );
@@ -38,8 +35,6 @@ var store = [{% for text in site.texts %}{
   "author": {{text.author | jsonify}},
   "layout": {{ text.layout | jsonify }},
   "link": {{text.url | jsonify}},
-  "activities": {{text.activities |jsonify}},
-  "purposes": {{text.purposes |jsonify}},
   "excerpt": {{text.content | strip_html |remove: "-"| truncatewords: 20 | jsonify}}
 }
 {% unless forloop.last %},{% endunless %}{% endfor %}]
@@ -81,12 +76,6 @@ function doSearch() {
     var act = "";
     var purp = "";
     var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a><p>';
-    for (var i = 0, c = store[ref].activities.length; i < c; i++) {
-	 act += '<a class="tag small" href="{{site-baseurl}}/GR8975-edition/list-activities/#'+store[ref].activities[i]+'"><span class="post-tag">'+store[ref].activities[i]+'</span></a>';
-      }
-    for (var i = 0, c = store[ref].purposes.length; i < c; i++) {
-        purp += '<a class="tag small" href="{{site-baseurl}}/GR8975-edition/list-purposes/#'+store[ref].purposes[i]+'"><span class="post-tag-2">'+store[ref].purposes[i]+'</span></a>';
-     }
     var end = '</p><p>'+store[ref].excerpt+'</p></div>';
     searchitem += act + purp + end;
     resultdiv.append(searchitem);

@@ -838,6 +838,10 @@ ol.bibliography {
   top: -0.4em;
 }
 
+.sup {
+ color: green;	
+}
+
 .sup:before {
   content: "[";
 }

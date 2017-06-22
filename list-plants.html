@@ -59,7 +59,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
          <a href="{{ site.baseurl }}/texts/{{ text.identifier }}">
          {{ text.title }}
          </a>
-         <small>- {{ text.folio }}</small>
+         
          <br/>
          {% for tag in text.plants %}
              <a class="tag small" href="#{{ tag | slugify }}"><span class="post-tag"> {{ tag }} </span></a>

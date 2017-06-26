@@ -10,11 +10,16 @@ editor: GR8975 Seminar Participants
 rights: Public Domain
 materials: [gold, yellow thin cloth, chalk-yellowed fabric, cloth, glue, gum, thread, silk, threads, silver, sage foliage, rowan, oil, emery, iron, steel, stone, wood, boxwood, willow wood, clinker, iron scale, flin, pierre de fouldre]
 tools: []
+measurements: []
+bodyparts: []
+places: []
 plants: []
+professions: [Those who create sword hilts, furbishers, blacksmiths]
+environments: []
 animals: []
 ---
 
-<div class="folio" align="center">- - - - - <a href="http://gallica.bnf.fr/ark:/12148/btv1b10500001g/f194.image" target="_blank"><img src="https://cu-mkp.github.io/2017-workshop-edition/assets/photo-icon.png" alt="folio image: " style="display:inline-block; margin-bottom:-3px;"/>94v</a> - - - - - </div>  
+<p><a href="{{ site.baseurl }}/diplomatic/">[TOC]</a></p><div class="folio" align="center">- - - - - <a href="http://gallica.bnf.fr/ark:/12148/btv1b10500001g/f194.image" target="_blank"><img src="https://cu-mkp.github.io/2017-workshop-edition/assets/photo-icon.png" alt="folio image: " style="display:inline-block; margin-bottom:-3px;"/>94v</a> - - - - - </div>  
  
 *[continued]*
   

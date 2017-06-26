@@ -1,20 +1,25 @@
 ---
 layout: narrative
-title: 0061v
-identifier: p-0061v
-folio: 0061v
+title: 061v
+identifier: p-061v
+folio: 061v
 annotation: no
 author:
 mode: tl
 editor: GR8975 Seminar Participants
 rights: Public Domain
-materials: [Water, vine water, candle, glass, canvas, oiled, clear turpentine varnish, turpentine oil, turpentine, Azure enamel, oil, water, butter, mortar, ceruse, Azure, azure, lacquer, whites]
-tools: []
+materials: [Water, vine water, candle, glass, canvas, clear turpentine varnish, turpentine oil, turpentine, ratwhiskers, Azure enamel, oil, water, butter, mortar, ceruse, Azure, azure, lacquer, whites]
+tools: [pinceaulx composed of two or three ratwhiskers]
+measurements: [half, almost half]
+bodyparts: []
+places: [German, Germans]
 plants: []
+professions: [painters]
+environments: []
 animals: [rat]
 ---
 
-<div class="folio" align="center">- - - - - <a href="http://gallica.bnf.fr/ark:/12148/btv1b10500001g/f128.image" target="_blank"><img src="https://cu-mkp.github.io/2017-workshop-edition/assets/photo-icon.png" alt="folio image: " style="display:inline-block; margin-bottom:-3px;"/>0061v</a> - - - - - </div>  
+<p><a href="{{ site.baseurl }}/diplomatic/">[TOC]</a></p><div class="folio" align="center">- - - - - <a href="http://gallica.bnf.fr/ark:/12148/btv1b10500001g/f128.image" target="_blank"><img src="https://cu-mkp.github.io/2017-workshop-edition/assets/photo-icon.png" alt="folio image: " style="display:inline-block; margin-bottom:-3px;"/>061v</a> - - - - - </div>  
   
 
 ## <span class="m">Water</span> to make light for <span class="pro">painters</span>
@@ -25,10 +30,10 @@ Distill some <span class="m">vine water</span> and put it into a big bottle. Put
  
   
 
-## Chassis used by Germans
+## <span class="pl">German</span> chassis
 
  
-Germans who work in small scale make 'chassis" not of <span class="m">glass</span> but of <span class="m">canvas</span> <span class="m">oiled</span> with <span class="m">clear turpentine varnish</span>, that is half of <span class="m">turpentine oil</span> and almost half of <span class="m">turpentine</span>, because such light, being less bright than <span class="m">glass</span>, makes the lines appear thicker. And when they want to make something more delicate, such as veins and similar things, they use brushes made of two or three <span class="al">rat</span> hairs.
+<span class="pl">Germans</span> who work in miniature make chassis not of <span class="m">glass</span>, but of <span class="m">canvas</span> oiled with <span class="m">clear turpentine varnish</span>, namely <span class="ms">half</span> <span class="m">turpentine oil</span> & <span class="ms">almost half</span> <span class="m">turpentine</span>, because this light, which is not as bright as <span class="m">glass</span>, makes them see larger features. And when they want to make something subtle like veins <span class="del">de</span> & similar things, they use <span class="tl">pinceaulx composed of two or three <span class="m"><span class="al">rat</span>whiskers</span></span>.
  
  
   

@@ -11,8 +11,10 @@ The following part extracts all the tags from your posts and sort tags, so that 
 {% endcomment %}
 {% assign rawtags = "" %}
 {% for text in site.texts %}
+  {% if text.mode == "tc" %}
     {% assign ttags = text.bodyparts | join:'|' | append:'|' %}
     {% assign rawtags = rawtags | append:ttags %}
+   {% endif %}
 {% endfor %}
 {% assign rawtags = rawtags | split:'|' | sort %}
 
@@ -53,6 +55,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
     <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
     <ul>
      {% for text in site.texts %}
+       {% if text.mode == "tc" %}
          {% if text.bodyparts contains tag %}
          <li>
          <p>
@@ -67,6 +70,7 @@ The purpose of this snippet is to list all your posts posted with a certain tag.
          </p>
          </li>
          {% endif %}
+        {% endif %}
      {% endfor %}
     </ul>
 {% endfor %}

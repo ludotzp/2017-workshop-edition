@@ -821,3 +821,32 @@ ol.bibliography {
 .post-tag-2{display:inline-block;background:rgba(128,0,128,1.15);padding:0 .5rem;margin-right:.5rem;border-radius:4px;color:#6a9fb5;font-family:"PT Sans",Helvetica,Arial,sans-serif;font-size:67%;-webkit-transition:all 0.1s ease-in-out;-moz-transition:all 0.1s ease-in-out;transition:all 0.1s ease-in-out}
 
 .post-tag-3{display:inline-block;background:rgba(0,128,0,1.15);padding:0 .5rem;margin-right:.5rem;border-radius:4px;color:#6a9fb5;font-family:"PT Sans",Helvetica,Arial,sans-serif;font-size:67%;-webkit-transition:all 0.1s ease-in-out;-moz-transition:all 0.1s ease-in-out;transition:all 0.1s ease-in-out}
+
+/*MS Revisions*/
+
+.del {
+  font-size: 85%;
+  color: red;
+  text-decoration: line-through;
+}
+
+.add {
+  font-size: 85%;
+  color: blue;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+.sup {
+ color: green;	
+}
+
+.sup:before {
+  content: "[";
+}
+
+
+.sup:after {
+  content: "]";
+}

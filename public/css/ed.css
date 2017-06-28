@@ -851,6 +851,10 @@ ol.bibliography {
   content: "]";
 }
 
+.exp {
+ color: green;	
+}
+
 .exp:before {
   content: "{";
 }
@@ -858,4 +862,44 @@ ol.bibliography {
 
 .exp:after {
 	content: "}";
+}
+
+.unc {
+ color: green;	
+}
+
+.unc:before {
+  content: "[";
+}
+
+
+.unc:after {
+	content: "?]";
+}
+
+.gap {
+ color: green;	
+}
+
+.gap:before {
+  content: "[";
+}
+
+
+.gap:after {
+	content: "  ]";
+}
+
+.ill {
+ color: green;	
+}
+
+
+.ill:before {
+  content: "[";
+}
+
+
+.ill:after {
+	content: "  illegible]";
 }

@@ -877,29 +877,15 @@ ol.bibliography {
 	content: "?]";
 }
 
-.gap {
- color: green;	
-}
-
-.gap:before {
-  content: "[";
-}
 
 
-.gap:after {
-	content: "  ]";
-}
-
-.ill {
- color: green;	
+.gap:empty:before {
+  content: "[  ]";
+  color: green;
 }
 
 
-.ill:before {
-  content: "[";
-}
-
-
-.ill:after {
-	content: "  illegible]";
+.ill:empty:before {
+  content: "[illegible]";
+  color: green;
 }

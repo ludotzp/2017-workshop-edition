@@ -850,3 +850,12 @@ ol.bibliography {
 .sup:after {
   content: "]";
 }
+
+.exp:before {
+  content: "{";
+}
+
+
+.exp:after {
+	content: "}";
+}

@@ -5,19 +5,19 @@
 
 //Create the lunr index for the search
 
-var index = elasticlunr(function () {
-  this.addField('title')
-  this.addField('author')
-  this.addField('layout')
-  this.addField('content')
-  this.setRef('id')
+var index = lunr(function () {
+  this.field('title')
+  this.field('author')
+  this.field('layout')
+  this.field('content')
+  this.ref('id')
 });
 
 //Add to this index the proper metadata from the Jekyll content
 
 
 {% assign count = 0 %}{% for text in site.texts %}
-index.addDoc({
+index.add({
   title: {{text.title | jsonify}},
   author: {{text.author | jsonify}},
   content: {{text.content | jsonify | strip_html}},
@@ -33,7 +33,7 @@ var store = [{% for text in site.texts %}{
   "author": {{text.author | jsonify}},
   "layout": {{ text.layout | jsonify }},
   "link": {{text.url | jsonify}},
-  "excerpt": {{text.content | strip_html |remove: "-"| truncatewords: 20 | jsonify}}
+  "excerpt": {{text.content | strip_html |remove: "-"| remove: "[TOC] | [diplomatic] "|truncatewords: 20 | jsonify}}
 }
 {% unless forloop.last %},{% endunless %}{% endfor %}]
 
@@ -52,13 +52,7 @@ function doSearch() {
   var query = $('input#search').val();
 
   //The search is then launched on the index built with Lunr
-  var result = index.search(query, {
-    fields: {
-        title: {boost: 2},
-        content: {boost: 1}
-    },
-    bool: "OR"
-});
+  var result = index.search(query);
                                              
   resultdiv.empty();
   if (result.length == 0) {

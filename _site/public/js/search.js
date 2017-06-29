@@ -2,12 +2,12 @@
 
 //Create the lunr index for the search
 
-var index = elasticlunr(function () {
-  this.addField('title')
-  this.addField('author')
-  this.addField('layout')
-  this.addField('content')
-  this.setRef('id')
+var index = lunr(function () {
+  this.field('title')
+  this.field('author')
+  this.field('layout')
+  this.field('content')
+  this.ref('id')
 });
 
 //Add to this index the proper metadata from the Jekyll content
@@ -36,13 +36,7 @@ function doSearch() {
   var query = $('input#search').val();
 
   //The search is then launched on the index built with Lunr
-  var result = index.search(query, {
-    fields: {
-        title: {boost: 2},
-        content: {boost: 1}
-    },
-    bool: "OR"
-});
+  var result = index.search(query);
                                              
   resultdiv.empty();
   if (result.length == 0) {

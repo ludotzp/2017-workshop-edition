@@ -11,6 +11,7 @@ var index = lunr(function () {
   this.field('layout')
   this.field('content')
   this.ref('id')
+  this.field('mode')
 });
 
 //Add to this index the proper metadata from the Jekyll content
@@ -21,9 +22,12 @@ index.add({
   title: {{text.title | jsonify}},
   author: {{text.author | jsonify}},
   content: {{text.content | jsonify | strip_html}},
+  mode: {{text.mode | jsonify}},        
   id: {{count}}
 });{% assign count = count | plus: 1 %}{% endfor %}
 console.log( jQuery.type(index) );
+
+
 
 // Builds reference data (maybe not necessary for us, to check)
 
@@ -33,7 +37,8 @@ var store = [{% for text in site.texts %}{
   "author": {{text.author | jsonify}},
   "layout": {{ text.layout | jsonify }},
   "link": {{text.url | jsonify}},
-  "excerpt": {{text.content | strip_html |remove: "-"| remove: "[TOC] | "| replace: '[diplomatic]', '<b>Translation</b>'| replace: '[translation]', '<b>Diplomatic</b>'| truncatewords: 20 | jsonify}}
+  "mode": {{text.mode | jsonify}},         
+  "excerpt": {{text.content | strip_html |remove: "-"| remove: "[TOC] | "| replace: '[diplomatic]', '<b>diplomatic</b>'| replace: '[translation]', '<b>translation</b>'| truncatewords: 20 | jsonify}}
 }
 {% unless forloop.last %},{% endunless %}{% endfor %}]
 
@@ -46,7 +51,7 @@ location.search.substr(1).split("&").forEach(function(item) {
         v = s[1] && decodeURIComponent(s[1]);
     (k in qd) ? qd[k].push(v) : qd[k] = [v]
 });
-
+                                        
 function doSearch() {
   var resultdiv = $('#results');
   var query = $('input#search').val();

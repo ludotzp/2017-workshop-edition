@@ -76,26 +76,26 @@ function doSearch() {
               resultdiv.append(searchitem);
         }
     
-    if($('input[name=tcn]').is(':checked') && store[ref].mode == "tcn"){
-              var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a>';
-              var end = '<p>'+store[ref].excerpt+'</p></div>';
-              searchitem += end;
-              resultdiv.append(searchitem);
-        }
+      if($('input[name=tcn]').is(':checked') && store[ref].mode == "tcn"){
+                var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a>';
+                var end = '<p>'+store[ref].excerpt+'</p></div>';
+                searchitem += end;
+                resultdiv.append(searchitem);
+          }
+
+      if($('input[name=tl]').is(':checked') && store[ref].mode == "tl"){
+                var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a>';
+                var end = '<p>'+store[ref].excerpt+'</p></div>';
+                searchitem += end;
+                resultdiv.append(searchitem);
+          }
     
-    if($('input[name=tl]').is(':checked') && store[ref].mode == "tl"){
-              var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a>';
-              var end = '<p>'+store[ref].excerpt+'</p></div>';
-              searchitem += end;
-              resultdiv.append(searchitem);
-        }
-    
-    if(!$('input[name=tc]').is(':checked') && !$('input[name=tcn]').is(':checked') && !$('input[name=tcn]').is(':checked')){
-         var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a>';
-              var end = '<p>'+store[ref].excerpt+'</p></div>';
-              searchitem += end;
-              resultdiv.append(searchitem);
-    }
+      if(!$('input[name=tc]').is(':checked') && !$('input[name=tcn]').is(':checked') && !$('input[name=tcn]').is(':checked')){
+           var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a>';
+                var end = '<p>'+store[ref].excerpt+'</p></div>';
+                searchitem += end;
+                resultdiv.append(searchitem);
+      }
   
    }
   }

@@ -90,7 +90,7 @@ function doSearch() {
                 resultdiv.append(searchitem);
           }
     
-      if(!$('input[name=tc]').is(':checked') && !$('input[name=tcn]').is(':checked') && !$('input[name=tcn]').is(':checked')){
+      if(!$('input[name=tc]').is(':checked') && !$('input[name=tcn]').is(':checked') && !$('input[name=tl]').is(':checked')){
            var searchitem = '<div class="result"><a href="{{ site.baseurl }}'+store[ref].link+'?q='+query+'">'+store[ref].title+'</a>';
                 var end = '<p>'+store[ref].excerpt+'</p></div>';
                 searchitem += end;

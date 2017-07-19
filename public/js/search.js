@@ -61,11 +61,7 @@ function doSearch() {
   resultdiv.empty();
   if (result.length == 0) {
     resultdiv.append('<p class="">No results found.</p>');
-  } else if (result.length == 1) {
-    resultdiv.append('<p class="">Found '+result.length+' result</p>');
-  } else {
-    resultdiv.append('<p class="">Found '+result.length+' results</p>');
-  }
+  } 
   //Loop through, match, and add results
   for (var item in result) {
     var ref = result[item].ref;

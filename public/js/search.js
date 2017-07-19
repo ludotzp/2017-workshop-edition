@@ -37,7 +37,7 @@ var store = [{% for text in site.texts %}{
   "layout": {{ text.layout | jsonify }},
   "link": {{text.url | jsonify}},
   "mode": {{text.mode | jsonify}}, 
-  "excerpt": {{text.mode | append: " " | append: text.content | strip_html | remove: "-"| remove: "[TOC] | "| replace: 'tc', '<b>Transcription</b>'| replace: 'tl', '<b>Translation</b>'| replace: 'tcn', '<b>Normalized Transcription</b>'| truncatewords: 20 | jsonify}}
+  "excerpt": {{text.mode | append: " " | append: text.content | strip_html | remove: "[translation]" | remove: "[diplomatic]" |remove: "-"| remove: "[TOC] | "| replace: 'tcn', '<b>Normalized Transcription</b>'|replace: 'tc', '<b>Transcription</b>'| replace: 'tl', '<b>Translation</b>'| truncatewords: 20 | jsonify}}
 }
 {% unless forloop.last %},{% endunless %}{% endfor %}]
 

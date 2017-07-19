@@ -31,19 +31,18 @@ console.log( jQuery.type(index) );
 
 // Builds reference data (maybe not necessary for us, to check)
 
-
 var store = [{% for text in site.texts %}{
   "title": {{text.title | jsonify}},
   "author": {{text.author | jsonify}},
   "layout": {{ text.layout | jsonify }},
   "link": {{text.url | jsonify}},
-  "mode": {{text.mode | jsonify}},         
-  "excerpt": {{text.content | strip_html |remove: "-"| remove: "[TOC] | "| replace: '[diplomatic]', '<b>diplomatic</b>'| replace: '[translation]', '<b>translation</b>'| truncatewords: 20 | jsonify}}
+  "mode": {{text.mode | jsonify}}, 
+  "excerpt": {{text.content | strip_html |remove: "-"| remove: "[TOC] | "| replace: '[diplomatic]', '<b>Translation</b>'| replace: '[translation]', '<b>Diplomatic</b>'| truncatewords: 20 | jsonify}}
 }
 {% unless forloop.last %},{% endunless %}{% endfor %}]
 
 //Query
-
+                                        
 var qd = {}; //Gets values from the URL
 location.search.substr(1).split("&").forEach(function(item) {
     var s = item.split("="),
